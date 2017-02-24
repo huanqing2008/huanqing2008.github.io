@@ -1,2 +1,0 @@
-# huanqing
-vr_china
