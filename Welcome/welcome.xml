@@ -1,4 +1,4 @@
-<krpano>
+﻿<krpano>
 
 
 <layer name="Welcome_container"
@@ -97,6 +97,6 @@
         copy(layer[%1].width, new_width); 
         copy(layer[%1].height, new_height); 
 </action>
-<!-- 启动画面结束 -->
+<!-- 启动画面结3束 -->
 
 </krpano>
