@@ -1,0 +1,52 @@
+<krpano>
+
+<!-- 自动旋转及自动切换场景 -->
+<autorotate enabled="true"
+waittime="2.0"
+speed="2.0"
+horizon="0.0"
+/>
+ 
+<events name="onautorotateevents" keep="true" visible="true" onautorotateoneround="nextscene()"/>
+ 
+<action name="nextscene">
+	autorotate.stop();
+	wait(1);
+	set(ns, get(scene[get(xml.scene)].index));
+	set(maxs, get(scene.count));
+	add(ns,1);
+	if(ns == maxs, set(ns,0)); 
+	loadscene(get(scene[get(ns)].name), null, MERGE, BLEND(1.5));
+	autorotate.start();
+</action>
+
+<!-- 自动旋转及自动切换场景代码分析 
+<autorotate enabled="true"
+自动旋转使能
+waittime="2.0"
+界面无交互后的等待时间
+speed="2.0"
+旋转速度。正值逆时针；负值为顺时针
+horizon="0.0"
+为场景在自动旋转时将达到的水平位置。
+/>
+ 
+<events name="onautorotateevents" keep="true" visible="true" 
+       自动顺序播放场景的事件控制   keep为全局设置    visible为有效性    
+       onautorotateoneround="nextscene()"/>
+       最后一个是调用的动作 
+
+<action name="nextscene">
+	autorotate.stop();
+	wait(1);
+	旋转完成到切换到下一个场景的等待时间   单位 s
+	set(ns, get(scene[get(xml.scene)].index));
+	set(maxs, get(scene.count));
+	add(ns,1);
+	if(ns == maxs, set(ns,0));
+	全部场景顺序循环完回到第一个场景
+	loadscene(get(scene[get(ns)].name), null, MERGE, BLEND(1.5));
+	autorotate.start();
+</action> 
+-->
+</krpano>
