@@ -1,0 +1,43 @@
+<krpano>
+
+<!-- 扫一扫二维码分享或者关注 --> 
+ <plugin url="%SWFPATH%/erweima/erweima_tubiao.png" 
+ 	     name="erweima_tubiao"
+ 	     onclick="switch(layer[erweima].visible)" 
+ 	     align="righttop"
+ 	     y="210" 
+ 	     y.mobile="160" 
+ 	     x="0" 
+ 	     alpha="0.8" 
+ 	     onout="tween(scale,0.8);tween(alpha,0.8);" 
+  	     onover="tween(scale,0.9);tween(alpha,1);"
+ 	     scale="0.8" 
+ 	     scale.mobile="0.60"
+ 	     keep="true"/>
+
+ <plugin url="%SWFPATH%/erweima/erweima.png" 
+ 	     name="erweima" 
+ 	     onloaded="erweima_resize(get(name));"
+ 	     onclick="set(plugin[erweima].visible,false)" 
+ 	     align="center"
+ 	     y="0" x="0" keep="true"
+ 	     visible = "false"/>
+
+
+<!-- 使用屏幕宽度或高度的百分之九十 -->
+<action name="erweima_resize">
+        div(aspect, layer[%1].imagewidth, layer[%1].imageheight); 
+        mul(new_width, stagewidth, 0.6); 
+        div(new_height, new_width, aspect); 
+        mul(max_height, stageheight, 0.6);
+        if(new_height GT max_height,
+        copy(new_height, max_height);
+        mul(new_width, new_height, aspect);
+);
+        roundval(new_width);
+        roundval(new_height);
+        copy(layer[%1].width, new_width);
+        copy(layer[%1].height, new_height);
+</action>
+
+</krpano>
