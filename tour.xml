@@ -15,7 +15,7 @@
 	               maps_bing_api_key=""
 	               maps_zoombuttons="false"
 	               gyro="true"
-	               littleplanetintro="true"
+	               littleplanetintro="false"
 	               title="true"
 	               thumbs="true"
 	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
@@ -127,15 +127,7 @@
 
 		<!-- place your scene hotspots here -->
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="98.667" atv="25.870" linkedscene="scene_room01" />
-		<hotspot name="spot22" style="skin_hotspotstyle" ath="98.667" atv="85.870"   />
-
-		<hotspot name="spot22" onhover="showtext([b]Doris Walther [br][/br]-Grabauer Kapelle-[br][/br]Acryl[/b],STYLE3);" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="3.0" bordercolor="0xaaaaaa" borderalpha="0" 
-	         >
-		<point ath="-69.75303" atv="-14.200761" />
-		<point ath="-56.446961" atv="-14.596233" />
-		<point ath="-56.282613" atv="3.555969" />
-		<point ath="-69.723255" atv="3.539871" />
-	    </hotspot>
+		
 
 
 	</scene>
