@@ -2,7 +2,7 @@
 
 	<include url="skin/vtourskin.xml" />
 	<include url="%SWFPATH%/sound/sound.xml" />
-    <include url="%SWFPATH%/Welcome/Welcome.xml" />
+    <!--<include url="%SWFPATH%/Welcome/Welcome.xml" />-->
 	<include url="%SWFPATH%/autorotate_scene/autorotate_scene.xml" />
 	<include url="%SWFPATH%/erweima/erweima.xml" />
 	<include url="%SWFPATH%/loading/loading.xml" />
